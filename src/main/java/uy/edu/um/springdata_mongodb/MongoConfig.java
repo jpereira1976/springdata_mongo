@@ -14,7 +14,6 @@ public class MongoConfig {
     public MongoClient mongoClient() {
         return MongoClients.create("mongodb://localhost:27017");
     }
-
     @Bean
     public MongoTemplate mongoTemplate(@Autowired MongoClient mongoClient) {
         return new MongoTemplate(mongoClient, "test_sd");
